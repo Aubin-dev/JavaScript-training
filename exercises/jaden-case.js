@@ -15,12 +15,10 @@
 // your code :
 
 function jadenCase(item) {
-    let first = item.split(' ')
-    for (let i = 0; i < item.length; i++) {
-        return first[i].toCapitalize().join('')
-    }
+
+    return item.toLowerCase().split(' ').map(letter => letter[0].toUpperCase() + letter.slice(1)).join(' ');
+
 }
-jj
 
 //* Begin of tests
 const assert = require('assert')
@@ -29,9 +27,9 @@ const assert = require('assert')
 
 assert.strictEqual(typeof jadenCase, 'function')
 
-assert.strictEqual(jadenCase('How are you'), 'How Are You ?')
+assert.strictEqual(jadenCase('you are beautiful'), 'You Are Beautiful')
 assert.strictEqual(jadenCase('good morning'), 'Good Morning')
-assert.strictEqual(jadenCase('heLlo'), 'Hello')
+assert.strictEqual(jadenCase('heLlo guy'), 'Hello Guy')
 
-assert.fail('You must write your own tests')
-    // End of tests */
+//assert.fail('You must write your own tests')
+// End of tests */

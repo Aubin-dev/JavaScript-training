@@ -22,7 +22,7 @@ function repeat(string, number) {
             let repeat = string;
             repeat += string;
         }
-        return repeat
+        return repeat;
     }
 
 }
